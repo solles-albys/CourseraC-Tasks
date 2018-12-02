@@ -1,0 +1,53 @@
+// Pass Test 1
+Add 1-1-1 event
+Add 1-1-1 event
+Add 1-1-1 event
+Add 1-1-1 event
+Print
+Find 1-1-1
+// Out: 1-1-1 event
+// Out: event
+
+// Pass Test 2
+Add 1-1-1 b
+Add 1-1-1 e
+Add 1-1-1 a
+Add 1-1-1 d
+Add 1-1-1 c
+Find 1-1-1
+// OUT: a
+// OUT: b
+// OUT: c
+// OUT: d
+// OUT: e
+
+// Pass Test 3
+Add -1-1-1 a
+Add 0-1-1 d
+Add 1-1-1 g
+Add -1-2-1 b
+Add -1-2-2 c
+Add 0-2-1 e
+Add 0-2-2 f
+Print
+// OUT: -0001-01-01 a
+// OUT: -0001-02-01 b
+// OUT: -0001-02-02 c
+// OUT: 0000-01-01 d
+// OUT: 0000-02-01 e
+// OUT: 0000-02-02 f
+// OUT: 0001-01-01 g
+
+// No Pass
+Add --1-0-0 a
+
+Add -1--0--0 aA
+
+Add 9-14-0 a
+// OUT: Invalid month
+
+Add 9-14-55 a
+// OUT: Invalid month
+
+Add 9-11-55
+// OUT: Invalid day
